@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRAVINGZEST | Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadCart()">
+
+<header>
+  <h1>🍽️ CART ITEMS</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<h2 class="cart-title">🛒 Your Cart Items</h2>
+
+<!-- CART ITEMS BOX -->
+<div class="cart-box">
+  <ul id="cartItems"></ul>
+</div>
+
+<!-- SUMMARY BOX -->
+<div class="summary">
+  <p>Subtotal: ₹<span id="subtotal">0</span></p>
+  <p>Delivery Charge: ₹40</p>
+
+  <label>Tip (₹): </label>
+  <input type="number" id="tip" value="0" oninput="updateTotal()">
+
+  <h3 class="total-text">
+    Total Payable: ₹<span id="total">40</span>
+  </h3>
+
+  <button onclick="alert('Payment Successful!')">Pay Now</button>
+  <button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<a href="menu.html" class="back-btn">⬅ Back to Menu</a>
+
+<script src="script.js"></script>
+</body>
+</html>
